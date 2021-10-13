@@ -9,7 +9,7 @@ fi
 
 echo "Using virtualenv located in : $VIRTUAL_ENV"
 
-echo -e "\n| --------------------- Running unit tests ------------------------- |"
+echo -e "\n| --------------------- Running unit tests ------------------------ |"
 
 cd src
 python -m pytest
