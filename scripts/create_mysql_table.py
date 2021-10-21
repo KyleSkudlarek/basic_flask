@@ -8,13 +8,37 @@ cnx = mysql.connector.connect(user='kyle', password='KJSkud26',
 cursor = cnx.cursor()
 
 
+
+# playerID,birthYear,birthMonth,birthDay,birthCountry,birthState,birthCity,deathYear,deathMonth,deathDay,deathCountry,deathState,deathCity,nameFirst,nameLast,nameGiven,weight,height,bats,throws,debut,finalGame,retroID,bbrefID
 def create_table():
     # Create table
     query = """
     CREATE TABLE players(
-       name VARCHAR(100) NOT NULL,
-       score INT,
-       PRIMARY KEY ( name )
+       playerID VARCHAR(100) NOT NULL,
+       birthYear INT,
+       birthMonth INT,
+       birthDay INT,
+       birthCountry VARCHAR(100),
+       birthState VARCHAR(100),
+       birthCity VARCHAR(100),
+       deathYear INT,
+       deathMonth INT,
+       deathDay INT,
+       deathCountry VARCHAR(100),
+       deathState VARCHAR(100),
+       deathCity VARCHAR(100),
+       nameFirst VARCHAR(100),
+       nameLast VARCHAR(100),
+       nameGiven VARCHAR(100),
+       weight INT,
+       height INT,
+       bats VARCHAR(100),
+       throws VARCHAR(100),
+       debut VARCHAR(100),
+       finalGame VARCHAR(100),
+       retroID VARCHAR(100),
+       bbrefID VARCHAR(100),     
+       PRIMARY KEY ( playerID )
     );
     """
     print(query)
@@ -35,4 +59,4 @@ def load_table():
 
 if __name__ == "__main__":
     create_table()
-    load_table()
+    # load_table()
